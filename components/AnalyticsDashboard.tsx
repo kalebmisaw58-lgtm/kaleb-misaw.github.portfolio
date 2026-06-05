@@ -68,7 +68,7 @@ return(
 <div className="flex flex-wrap gap-2 mb-8">
 {(Object.keys(C)as K[]).map(k=>(<button key={k} onClick={()=>setActive(k)} className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${active===k?"bg-violet-600 text-white shadow-lg shadow-violet-500/20":"bg-zinc-800/60 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800"}`}>{k}</button>))}
 </div>
-<div className="grid sm:grid-cols-3 gap-4 mb-8">
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
 {d.kpis.map(({label,value,change,Icon,color})=>(<div key={label} className="bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-5 hover:border-violet-500/30 transition-all duration-300"><div className="flex items-center justify-between mb-3"><span className="text-xs font-medium text-zinc-500 uppercase tracking-wide">{label}</span><Icon size={16} className={color}/></div><div className={`text-3xl font-black ${color} mb-1`}>{value}</div><div className="text-xs font-semibold text-emerald-400">{change} vs prev period</div></div>))}
 </div>
 <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-xl p-6">

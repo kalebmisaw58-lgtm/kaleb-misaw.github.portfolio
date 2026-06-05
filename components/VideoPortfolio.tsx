@@ -45,10 +45,21 @@ function VideoModal({ video, onClose }: { video: (typeof videos)[0]; onClose: ()
 }
 
 function VideoCard({ video, onClick }: { video: (typeof videos)[0]; onClick: () => void }) {
+  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-xl overflow-hidden group cursor-pointer hover:border-violet-500/40 transition-all duration-300 hover:-translate-y-1" onClick={onClick} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") onClick(); }} aria-label={`Play ${video.title}`}>
       <div className="relative aspect-video bg-zinc-900 overflow-hidden">
-        <img src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} alt={video.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+        {/* Skeleton */}
+        {!imgLoaded && (
+          <div className="absolute inset-0 bg-zinc-800 animate-pulse" />
+        )}
+        <img
+          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+          alt={video.title}
+          className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+          loading="lazy"
+          onLoad={() => setImgLoaded(true)}
+        />
         <div className="absolute inset-0 bg-zinc-950/40 group-hover:bg-zinc-950/20 transition-colors duration-300" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-violet-600/90 flex items-center justify-center group-hover:scale-110 group-hover:bg-violet-500 transition-all duration-300">

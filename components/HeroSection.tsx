@@ -125,14 +125,17 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
         <div className="flex flex-col gap-6">
-          {/* Availability Badge */}
-          <div className="animate-on-scroll">
+          {/* Badges row */}
+          <div className="animate-on-scroll flex flex-wrap gap-2">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               Active for Q1 / Q2 2026
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-zinc-800/60 border border-zinc-700/60 text-zinc-400 text-xs font-semibold">
+              📍 Addis Ababa, Ethiopia
             </div>
           </div>
 
