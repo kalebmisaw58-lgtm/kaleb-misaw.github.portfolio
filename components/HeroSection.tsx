@@ -196,16 +196,43 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right Column — Bento Tech Grid */}
-        <div className="animate-on-scroll">
+        {/* Right Column — Photo + Bento Tech Grid */}
+        <div className="animate-on-scroll flex flex-col gap-3">
+
+          {/* Photo + top 2 tech cards side by side */}
           <div className="grid grid-cols-2 gap-3">
-            {techCards.map((card, i) => (
-              <TechCard key={card.label} {...card} delay={i * 80} />
+            {/* Profile photo card */}
+            <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800/80 aspect-[3/4] row-span-2 group">
+              <img
+                src="/kaleb.jpg"
+                alt="Kaleb Misaw"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Gradient overlay at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <p className="text-xs font-bold text-zinc-100">Kaleb Misaw</p>
+                <p className="text-xs text-zinc-400">Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+
+            {/* Right: 2 stacked tech cards */}
+            <div className="flex flex-col gap-3">
+              {techCards.slice(0, 2).map((card, i) => (
+                <TechCard key={card.label} {...card} delay={i * 80} />
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom: 2 tech cards + stats */}
+          <div className="grid grid-cols-2 gap-3">
+            {techCards.slice(2).map((card, i) => (
+              <TechCard key={card.label} {...card} delay={(i + 2) * 80} />
             ))}
           </div>
 
           {/* Stats row */}
-          <div className="mt-3 grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             {[
               { value: "40+", label: "Projects Shipped" },
               { value: "2M+", label: "Social Impressions" },
