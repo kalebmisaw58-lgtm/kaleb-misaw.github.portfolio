@@ -3,19 +3,17 @@ import{useState}from"react";
 import{TrendingUp,MousePointerClick,Eye}from"lucide-react";
 import{LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,ResponsiveContainer}from"recharts";
 const C={
-"Tech Startup Growth":{
+"Africa Celebrates":{
 kpis:[
-{label:"Total Impressions",value:"4.2M",change:"+38%",Icon:Eye,color:"text-blue-400"},
-{label:"Avg Engagement Rate",value:"6.8%",change:"+2.1pp",Icon:TrendingUp,color:"text-violet-400"},
-{label:"Click-Through Rate",value:"3.4%",change:"+0.9pp",Icon:MousePointerClick,color:"text-emerald-400"},
+{label:"Total Followers",value:"25.6K",change:"+25.6K since Mar",Icon:Eye,color:"text-blue-400"},
+{label:"Avg Engagement Rate",value:"7.2%",change:"+7.2pp",Icon:TrendingUp,color:"text-violet-400"},
+{label:"Avg Reach per Post",value:"18.4K",change:"+142%",Icon:MousePointerClick,color:"text-emerald-400"},
 ],
 chart:[
-{month:"Jan",impressions:280,followers:1200},
-{month:"Feb",impressions:420,followers:1580},
-{month:"Mar",impressions:610,followers:2100},
-{month:"Apr",impressions:780,followers:2800},
-{month:"May",impressions:950,followers:3600},
-{month:"Jun",impressions:1180,followers:4500},
+{month:"Mar",impressions:42,followers:2100},
+{month:"Apr",impressions:98,followers:7400},
+{month:"May",impressions:167,followers:14800},
+{month:"Jun",impressions:224,followers:25600},
 ],
 },
 "SaaS Campaign":{
@@ -55,7 +53,7 @@ if(!active||!payload?.length)return null;
 return(<div className="bg-zinc-900 border border-zinc-700 rounded-xl p-3 text-sm shadow-xl"><p className="text-zinc-400 font-medium mb-2">{label}</p>{payload.map((p:any)=>(<p key={p.name} style={{color:p.color}} className="font-semibold capitalize">{p.name}: {p.value.toLocaleString()}{p.name==="impressions"?"K":""}</p>))}</div>);
 };
 export default function AnalyticsDashboard(){
-const[active,setActive]=useState<K>("Tech Startup Growth");
+const[active,setActive]=useState<K>("Africa Celebrates");
 const d=C[active];
 return(
 <section id="analytics" className="py-24 bg-zinc-900/20">
@@ -63,7 +61,7 @@ return(
 <div className="mb-12">
 <p className="text-violet-500 text-sm font-semibold tracking-widest uppercase mb-3">Performance</p>
 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-100">Data-Driven Social Media Performance</h2>
-<p className="text-zinc-400 mt-3 max-w-xl">Real campaign results across three client verticals. Every metric is tracked, analyzed, and used to inform the next content cycle.</p>
+<p className="text-zinc-400 mt-3 max-w-xl">Real results from accounts I manage. Africa Celebrates grew to 25.6K followers in under 4 months — built on consistent content strategy, cultural storytelling, and data-driven posting schedules.</p>
 </div>
 <div className="flex flex-wrap gap-2 mb-8">
 {(Object.keys(C)as K[]).map(k=>(<button key={k} onClick={()=>setActive(k)} className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${active===k?"bg-violet-600 text-white shadow-lg shadow-violet-500/20":"bg-zinc-800/60 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800"}`}>{k}</button>))}
