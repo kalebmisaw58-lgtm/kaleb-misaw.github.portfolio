@@ -12,7 +12,7 @@ const techCards = [
     color: "from-blue-500 to-cyan-400",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
-    years: "4 yrs",
+    years: "3 yrs",
   },
   {
     icon: Video,
@@ -21,7 +21,7 @@ const techCards = [
     color: "from-violet-500 to-purple-400",
     bg: "bg-violet-500/10",
     border: "border-violet-500/20",
-    years: "5 yrs",
+    years: "2 yrs",
   },
   {
     icon: BarChart3,
@@ -30,7 +30,7 @@ const techCards = [
     color: "from-orange-500 to-amber-400",
     bg: "bg-orange-500/10",
     border: "border-orange-500/20",
-    years: "3 yrs",
+    years: "2 yrs",
   },
   {
     icon: Zap,
@@ -204,7 +204,7 @@ export default function HeroSection() {
             {/* Profile photo card */}
             <div className="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800/80 aspect-[3/4] row-span-2 group">
               <img
-                src="/kaleb.jpg"
+                src="/kaleb.JPG"
                 alt="Kaleb Misaw"
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
