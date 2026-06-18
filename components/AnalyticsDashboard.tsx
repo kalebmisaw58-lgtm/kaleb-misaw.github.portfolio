@@ -16,19 +16,17 @@ chart:[
 {month:"Jun",impressions:224,followers:25600},
 ],
 },
-"SaaS Campaign":{
+"Legendary Gold Ltd":{
 kpis:[
-{label:"Total Impressions",value:"2.8M",change:"+52%",Icon:Eye,color:"text-blue-400"},
-{label:"Avg Engagement Rate",value:"8.2%",change:"+3.4pp",Icon:TrendingUp,color:"text-violet-400"},
-{label:"Click-Through Rate",value:"4.1%",change:"+1.6pp",Icon:MousePointerClick,color:"text-emerald-400"},
+{label:"Total Followers",value:"9.1K",change:"+9.1K since Mar",Icon:Eye,color:"text-blue-400"},
+{label:"Avg Engagement Rate",value:"5.8%",change:"+5.8pp",Icon:TrendingUp,color:"text-violet-400"},
+{label:"Avg Reach per Post",value:"6.2K",change:"+98%",Icon:MousePointerClick,color:"text-emerald-400"},
 ],
 chart:[
-{month:"Jan",impressions:180,followers:800},
-{month:"Feb",impressions:310,followers:1100},
-{month:"Mar",impressions:490,followers:1600},
-{month:"Apr",impressions:620,followers:2200},
-{month:"May",impressions:810,followers:3100},
-{month:"Jun",impressions:1050,followers:4200},
+{month:"Mar",impressions:18,followers:800},
+{month:"Apr",impressions:44,followers:2900},
+{month:"May",impressions:76,followers:5800},
+{month:"Jun",impressions:112,followers:9100},
 ],
 },
 "E-commerce Launch":{
